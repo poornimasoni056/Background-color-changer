@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#171916" />
+  <title>Color Changer — Background Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+ 
+</head>
+<body>
+  <main class="studio" id="studio">
+    <header class="topbar">
+      <a class="wordmark" href="#" aria-label="Color Changer home"><span class="logo-mark">cc</span>Color&nbsp;Changer<span class="wordmark-dot">.</span></a>
+      <p class="top-note">A little colour goes a long way.</p>
+      <button class="share-button" id="copyButton" type="button"><span class="copy-icon">▢</span><span>Copy CSS</span></button>
+    </header>
+
+    <section class="workspace" aria-label="Background colour studio">
+      <div class="intro">
+        <span class="eyebrow"><span class="eyebrow-line"></span> YOUR CANVAS, YOUR RULES</span>
+        <h1>Find your<br /><em>kind of colour.</em></h1>
+        <p class="subtitle">Tap a shade. Set a mood. Make it yours.</p>
+      </div>
+
+      <div class="canvas-wrap">
+        <div class="canvas" id="canvas" style="--canvas-color:#34443A" aria-label="Live background preview">
+          <div class="canvas-grain" aria-hidden="true"></div>
+          <span class="canvas-tag"><span class="live-dot"></span> LIVE PREVIEW</span>
+          <div class="canvas-center">
+            <span class="canvas-overline">A FRESH PERSPECTIVE</span>
+            <h2>Make room<br />for <em>something</em><br />new.</h2>
+            <span class="canvas-caption">YOUR NEXT FAVOURITE SHADE</span>
+          </div>
+          <span class="canvas-index">01 <i>/</i> 12</span>
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="control-heading">
+          <div><span class="section-label">THE PALETTE</span><span class="palette-hint">Pick a colour to paint your canvas</span></div>
+          <span class="selected-colour"><span class="selected-dot" id="selectedDot"></span><span id="hexValue">#34443A</span></span>
+        </div>
+        <div class="swatches" id="swatches" role="group" aria-label="Choose a background colour"></div>
+        <div class="bottom-controls">
+          <label class="custom-colour"><span class="picker-icon">◉</span><span>Choose your own</span><input id="colorPicker" type="color" value="#34443A" aria-label="Choose custom background colour" /></label>
+          <span class="control-divider"></span>
+          <button class="random-button" id="randomButton" type="button"><span class="shuffle-icon">⤨</span> Surprise me <kbd>SPACE</kbd></button>
+        </div>
+      </div>
+    </section>
+    <footer><span>MADE FOR YOUR MOOD</span><span class="footer-star">✳</span><span>TAKE A BREATH. PICK A COLOUR.</span></footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </main>
+
+   <script src="script.js" defer></script>
+</body>
+</html>
